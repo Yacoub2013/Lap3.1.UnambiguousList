@@ -110,7 +110,7 @@ public class CustomLinkedToList implements CustomList {
 
     }
 
-    //  9.печать всех значений списка;
+//      9.печать всех значений списка;
 //    @Override
 //    public String toString() {
 //        StringBuilder sb = new StringBuilder("[");
@@ -128,8 +128,7 @@ public class CustomLinkedToList implements CustomList {
 
 
 
-    //    10.*удаление заданного значения из списка; если значения в списке нет, то ничего проис-
-//      ходить не должно;
+    //    10.*удаление заданного значения из списка; если значения в списке нет, то ничего происходить не должно;
     @Override
     public void remove(Integer date) {
         if (head != null) {
@@ -151,6 +150,9 @@ public class CustomLinkedToList implements CustomList {
             }
         }
     }
+
+
+
 
     // 11. добавление всех значений заданного массива в начало списка; порядок значений должен сохраняться — первое значение массива должно стать первым значением списка;
         public void addToAllHeadR(Integer[] array) {
@@ -184,8 +186,28 @@ public void addToAllTail(Iterable<Integer> iterable){
             }
         }
     }
+// 14.поглощение списка другим списком с добавлением значений второго в начало первого списка; после поглощения второй список должен очищаться;
 
-// 14.печать всех значений списка в обратном порядке ;
+    public void absorbingTheListToTail(CustomLinkedToList newList){
+      tail.next = newList.head;
+      newList.head.previous=tail;
+      tail=newList.tail;
+    }
+
+
+// 15.поглощение списка другим списком с добавлением значений второго в конец первого списка; после поглощения второй список должен очищаться;
+
+    public void absorbingTheListToHead(CustomLinkedToList newList){
+        newList.tail.next = head;
+        head.previous = newList.tail;
+        head = newList.head;
+
+    }
+
+
+
+
+// 16.печать всех значений списка в обратном порядке ;
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
@@ -202,22 +224,6 @@ public void addToAllTail(Iterable<Integer> iterable){
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
     public void print() {
         System.out.println(toString());
@@ -229,7 +235,6 @@ public void addToAllTail(Iterable<Integer> iterable){
 
 
     }
-
 
 
 

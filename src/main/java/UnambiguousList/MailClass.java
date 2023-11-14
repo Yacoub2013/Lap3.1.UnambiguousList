@@ -46,15 +46,29 @@ public class MailClass {
         list.addToAllTailR(num4);
         list.print();
 
+        CustomLinkedToList num7= new CustomLinkedToList();
+        num7.add(99999);
+        num7.add(888888);
+        num7.add(7777777);
+        list.absorbingTheListToHead(num7);
 
 
 
-        System.out.println("First element= "+ list.getFirst());
-        System.out.println("Last element= "+ list.getToLast());
-        System.out.println("Get and delete first element= "+ list.getAndFirstFirst());
-        System.out.println("Get and delete last element= "+list.getEndDeleteToLast());
-        System.out.println("Validate = "+list.validity(15));
-        System.out.println("isEmpty = "+list.isEmpty());
+
+        CustomLinkedToList num6= new CustomLinkedToList();
+        num6.add(99999);
+        num6.add(888888);
+        num6.add(7777777);
+        list.absorbingTheListToTail(num6);
+
+
+
+//        System.out.println("First element= "+ list.getFirst());
+//        System.out.println("Last element= "+ list.getToLast());
+//        System.out.println("Get and delete first element= "+ list.getAndFirstFirst());
+//        System.out.println("Get and delete last element= "+list.getEndDeleteToLast());
+//        System.out.println("Validate = "+list.validity(15));
+//        System.out.println("isEmpty = "+list.isEmpty());
 
           System.out.println(list);
 
